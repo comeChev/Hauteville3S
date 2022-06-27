@@ -57,6 +57,13 @@
   border: 1px solid;
 }
 
+.row-separate{
+  height: 5px;
+  background-color: white;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
 /* Precise CSS */
 #mainImage{
   background-image: url(./ressources/installation1.jpg);
@@ -71,8 +78,8 @@
 #mainText{
   text-align: center;
   padding: 10px 30px 10px 30px;
-  
 }
+
 
 /* Media queries */
 @media screen and (min-width:991px) {
