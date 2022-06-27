@@ -64,6 +64,20 @@
   margin-right: 25px;
 }
 
+.img-cart{
+  height: 20%;
+}
+
+.card-size{
+  height: 100%;
+}
+
+.btn-bot{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
 /* Precise CSS */
 #mainImage{
   background-image: url(./ressources/installation1.jpg);
