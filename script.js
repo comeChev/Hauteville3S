@@ -1,8 +1,15 @@
+// ---------------------------------------------------------
+// DECLARATION DES VARIABLES
+// ---------------------------------------------------------
 let myModal = new bootstrap.Modal(document.querySelector("#modalContact"), {});
 let buttonModal = document.querySelector("#btnContact")
 let lgMediaQuery = window.matchMedia("(min-width: 992px)")
 let mapSituation = document.querySelector("#mapSituation")
 let openingHours = document.querySelector("#openingHours")
+
+// ---------------------------------------------------------
+// DECLARATION DES FONCTIONS
+// ---------------------------------------------------------
 
 function showMap(lgMediaQuery){
   if(lgMediaQuery.matches){
@@ -24,10 +31,14 @@ function showMap(lgMediaQuery){
 function showModal(){
   myModal.show();
 }
-
 function underConstruction(){
   alert(`Cette page est en cours de construction. Veuillez nous excuser pour la gêne occasionnée.`)
 }
+
+// ---------------------------------------------------------
+// LANCEMENT DES FONCTIONS
+// ---------------------------------------------------------
+
 
 //document.onreadystatechange = setTimeout(showModal,1000)
 buttonModal.addEventListener("click",showModal);

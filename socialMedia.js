@@ -1,8 +1,14 @@
+// ---------------------------------------------------------
+// DECLARATION DES VARIABLES
+// ---------------------------------------------------------
 let smMediaQuery = window.matchMedia("(min-width: 576px)")
 let socialMedia = ['Facebook','Instagram','Twitter']
 let socialMediaIcon =['facebook', 'instagram','twitter']
 let divMedia = document.querySelector('#divMedia')
 
+// ---------------------------------------------------------
+// DECLARATION DES FONCTIONS
+// ---------------------------------------------------------
 function populateSocialMediaMobile(){
   for(let i =0; i<socialMedia.length;i++){
     let icoHTML = `<i class="bi bi-${socialMediaIcon[i]}"></i>`
@@ -16,6 +22,9 @@ function populateSocialMedia(){
   };
 }
 
+// ---------------------------------------------------------
+// LANCEMENT DES FONCTIONS
+// ---------------------------------------------------------
 
 if(smMediaQuery.matches){
   populateSocialMedia()

@@ -95,6 +95,17 @@ main{
 .shadow-card{
   box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.603);
 }
+.collapsed-event{
+  display: none;
+}
+.chevron-down::before{
+  font-family: 'bootstrap-icons';
+  content : "\F282"
+}
+.chevron-up::before{
+  font-family: 'bootstrap-icons';
+  content : "\F286"
+}
 
 /* Precise CSS */
 #mainImage{
