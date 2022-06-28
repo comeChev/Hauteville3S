@@ -21,7 +21,7 @@ fetch("./json/dataEvent.json")
 function populateMobile(){
   eventTarget.innerHTML = ""
   myDataEvent.forEach(event => {
-  eventTarget.innerHTML += `<div class=" card col-12 m-2">
+  eventTarget.innerHTML += `<div class="card col-12 m-2">
   <div class=" card-body ps-2 pe-2 col-12 bg-white text-dark rounded">
   <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
   <h6 class="card-subtitle secondaryFontFam">${event.dateEvent}</h6>
@@ -37,7 +37,7 @@ function populate(){
     eventTarget.innerHTML = ""
     myDataEvent.forEach(event => {
     eventTarget.innerHTML += `<div class="col-md-4 col-lg-3 pb-2 pt-2">
-    <div class="card text-dark bg-light card-size">
+    <div class="card animateCard text-dark bg-light card-size">
     <img class="card-img-top" src= ${event.imgEvent}>
     <div class="card-body position-relative">
     <h3 class="card-title mainFontFam">${event.nameEvent}</h3>

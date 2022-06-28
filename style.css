@@ -85,6 +85,13 @@ main{
   bottom: 10px;
   right: 10px;
 }
+.animateCard{
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.animateCard:hover{
+  transform: translate(3px,-3px);
+}
 
 /* Precise CSS */
 #mainImage{
