@@ -16,7 +16,7 @@ function populateMobile(){
   .then(()=>{
     eventTarget.innerHTML = ""
     myDataEvent.forEach(event => {
-    eventTarget.innerHTML += `<div class="card col-12 m-2">
+    eventTarget.innerHTML += `<div class="card shadow-card col-12 mb-4">
     <div class=" card-body ps-2 pe-2 col-12 bg-white text-dark rounded">
     <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
     <h6 class="card-subtitle secondaryFontFam">${event.dateEvent}</h6>

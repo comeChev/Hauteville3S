@@ -92,6 +92,9 @@ main{
 .animateCard:hover{
   transform: translate(3px,-3px);
 }
+.shadow-card{
+  box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.603);
+}
 
 /* Precise CSS */
 #mainImage{
