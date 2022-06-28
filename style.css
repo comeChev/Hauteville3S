@@ -12,6 +12,11 @@
   src: url(./ressources/font/Marcellus/Marcellus-Regular.ttf) format("truetype");
 }
 
+a{
+  color:black;
+  text-decoration : none;
+}
+
 /* Utilities */
 .mainFontFam{
   font-family: "libelSuit";
@@ -93,7 +98,22 @@
   text-align: center;
   padding: 10px 30px 10px 30px;
 }
-
+#adressAsso{
+  background-color: rgba(203, 199, 199, 0.235);
+  font-size: 0.8rem;
+  padding:10px;
+  margin:10px;
+  border-radius: 5px;
+}
+#adressAsso p{
+  padding: 0;
+  margin: 0;
+}
+#buttonMap::after{
+  content: "\F64B";
+  font-family: 'bootstrap-icons';
+  margin-left:5px;
+}
 
 /* Media queries */
 @media screen and (min-width:991px) {

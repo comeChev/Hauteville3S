@@ -1,6 +1,6 @@
 let myModal = new bootstrap.Modal(document.querySelector("#modalContact"), {});
 let buttonModal = document.querySelector("#btnContact")
-let lgMediaQuery = window.matchMedia("(min-width: 992px)")
+let mdMediaQuery = window.matchMedia("(min-width: 768px)")
 let eventTarget = document.querySelector("#eventTarget")
 let myDataEvent=[];
 
@@ -55,8 +55,8 @@ function showModal(){
 
 populate()
 buttonModal.addEventListener("click",showModal);
-lgMediaQuery.addEventListener("change",()=>{
-  if(lgMediaQuery.matches){
+mdMediaQuery.addEventListener("change",()=>{
+  if(mdMediaQuery.matches){
     populate()
   } else{
     populateMobile()
