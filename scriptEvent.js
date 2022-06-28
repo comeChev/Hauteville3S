@@ -56,6 +56,7 @@ function showModal(){
   myModal.show();
 }
 
+
 if(mdMediaQuery.matches){
   populate()
 } else{

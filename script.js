@@ -32,6 +32,7 @@ function underConstruction(){
 //document.onreadystatechange = setTimeout(showModal,1000)
 buttonModal.addEventListener("click",showModal);
 showMap(lgMediaQuery);
+
 lgMediaQuery.addEventListener("change",showMap);
 
 
