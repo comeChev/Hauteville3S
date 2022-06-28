@@ -1,3 +1,4 @@
+
 let myModal = new bootstrap.Modal(document.querySelector("#modalContact"), {});
 let buttonModal = document.querySelector("#btnContact")
 let mdMediaQuery = window.matchMedia("(min-width: 768px)")
@@ -63,6 +64,9 @@ mdMediaQuery.addEventListener("change",()=>{
   }
 });
 
+function underConstruction(){
+  alert(`Cette page est en cours de construction. Veuillez nous excuser pour la gêne occasionnée.`)
+}
   
 
 

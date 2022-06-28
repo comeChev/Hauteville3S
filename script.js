@@ -25,6 +25,10 @@ function showModal(){
   myModal.show();
 }
 
+function underConstruction(){
+  alert(`Cette page est en cours de construction. Veuillez nous excuser pour la gêne occasionnée.`)
+}
+
 //document.onreadystatechange = setTimeout(showModal,1000)
 buttonModal.addEventListener("click",showModal);
 showMap(lgMediaQuery);
