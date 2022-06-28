@@ -17,6 +17,7 @@ a{
   text-decoration : none;
 }
 
+
 /* Utilities */
 .mainFontFam{
   font-family: "libelSuit";
@@ -98,11 +99,14 @@ a{
   text-align: center;
   padding: 10px 30px 10px 30px;
 }
+#mapGoogle{
+  height: 95%;
+  width: 95%;
+}
 #adressAsso{
   background-color: rgba(203, 199, 199, 0.235);
+  color: black;
   font-size: 0.8rem;
-  padding:10px;
-  margin:10px;
   border-radius: 5px;
 }
 #adressAsso p{
@@ -114,6 +118,32 @@ a{
   font-family: 'bootstrap-icons';
   margin-left:5px;
 }
+#phone::before{
+  content: "\F5C1";
+  font-family: 'bootstrap-icons';
+}
+#mail::before{
+  content: "\F32F";
+  font-family: 'bootstrap-icons';
+}
+#logo3S{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-image: url(./ressources/logoH3S.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#facebook::before{
+  content: "\F344";
+  font-family: 'bootstrap-icons';
+  margin-right: 3px;
+}
+#copyright{
+  font-size: 0.7rem;
+  line-height: 0.6;
+}
+
 
 /* Media queries */
 @media screen and (min-width:991px) {
