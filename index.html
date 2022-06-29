@@ -18,33 +18,47 @@
   </head>
 
   <body class="bg-dark text-light">
-    
-    <!-- DEBUT DE LA MODALE -->
-    <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="modalContact" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-    
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-    
-          <!-- Modal body -->
-          <div class="modal-body">
-            Modal body..
-          </div>
-    
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-orange" data-bs-dismiss="modal">Close</button>
+
+      <!-- DEBUT DE LA MODALE -->
+      <div class="modal fade text-dark" id="modalContact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title mainFontFam" id="exampleModalLabel">Nous contacter</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body secondaryFontFam">
+              <form id="modalForm">
+                <div class="mb-3">
+                  <label for="InputEmail" class="form-label">Votre adresse mail</label>
+                  <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="email@example.com">
+                  <div id="emailHelp" class="form-text thirdFontFam">Nous n'utiliserons pas votre e-mail à des fins malveillantes.</div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="inputFirstName" class="form-label">Votre prénom</label>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="John">
+                  </div>
+                  <div class="col-6">
+                    <label for="inputLastName" class="form-label">Votre nom</label>
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+                  </div>
+  
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="inputTextArea">Votre message</label>
+                  <textarea type="text" class="form-control" id="inputTextArea" placeholder="Ecrivez-nous votre message ici"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary mainFontFam" data-bs-dismiss="modal">Fermer</button>
+              <button class="btn btn-orange" type="submit">Envoyer le message</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- FIN DE LA MODALE -->
-
-
+      <!-- FIN DE LA MODALE -->
 
     <header>
       <nav class="navbar navbar-expand-md bg-grey-navbar fixed-top">
@@ -70,7 +84,7 @@
             </ul>
             <ul class="navbar-nav ms-md-auto">
               <li class="nav-item">
-                <a class="btn btn-orange mainFontFam" id="btnContact">Nous contacter</a>
+                <a class="btn btn-orange" id="btnContact" data-bs-toggle="modal" data-bs-target="#modalContact">Nous contacter</a>
               </li>
             </ul>
           </div>
@@ -164,8 +178,8 @@
             <p>01110 Plateau d'Hauteville</p>
           </address>
           <div>
-            <a class="btn btn-orange mainFontFam mt-2 ms-2" id="phone" href="tel:0474400054"></a>
-            <a class="btn btn-orange mainFontFam mt-2 ms-2" id="mail" href="mailto:contact@hauteville3s.com"></a>
+            <a class="btn btn-orange mt-2 ms-2" id="phone" href="tel:0474400054"></a>
+            <a class="btn btn-orange mt-2 ms-2" id="mail" href="mailto:contact@hauteville3s.com"></a>
           </div>
         </div>
         <div class="m-0 p-0 col-md-4 mt-md-2 mb-md-2" id="logo3S"></div>
@@ -185,13 +199,14 @@
         <p>Tous droits protégés. Site créé par Hauteville3S</p>
       </div>
     </footer>
-  
+    
     <!-- JAVASCRIPT BOOSTRAP -->
     <script src="./script/bootstrap.min.js"></script>
     <!-- VANILLA SCRIPT -->
     <script src="./json/dataEvent.json"></script>
     <script src="./script/script.js"></script>
     <script src="./script/socialMedia.js"></script>
+    <script src="./script/contact.js"></script>
   </body>
 
 </html>
