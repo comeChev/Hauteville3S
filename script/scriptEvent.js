@@ -1,7 +1,6 @@
 // ---------------------------------------------------------
 // DECLARATION DES VARIABLES
 // ---------------------------------------------------------
-let myModal = new bootstrap.Modal(document.querySelector("#modalContact"), {});
 let buttonModal = document.querySelector("#btnContact")
 let mdMediaQuery = window.matchMedia("(min-width: 768px)")
 let eventTargetNow = document.querySelector("#eventTargetNow")
@@ -38,9 +37,6 @@ function sortArrayDate (array){
 }
 function underConstruction(){
   alert(`Cette page est en cours de construction. Veuillez nous excuser pour la gêne occasionnée.`)
-}
-function showModal(){
-  myModal.show();
 }
 function populateMobile(){
   eventTargetNow.innerHTML = ""

@@ -45,6 +45,7 @@ function validateForm(array){
     messageClose.innerText = `Cette fenêtre va ser fermer automatiquement.`
     messageClose.classList.add("row", "justify-content-center", "text-success","txtInfo")
     timeOutForm(3000)
+    console.log(`finish`)
   }
 }
 
