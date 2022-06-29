@@ -21,7 +21,6 @@ let dateNow= new Date()
 
 function populateTextEvent(array,element,txt){
   element.innerText=""
-  console.log(array.length)
   if(array.length>0 || array.length == null){
     if(array.length == 1){
       element.innerText = `1 événement ${txt}`

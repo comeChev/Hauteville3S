@@ -1,15 +1,15 @@
 /*  Importing font face */
 @font-face {
   font-family: "libelSuit";
-  src: url(./ressources/font/libel_suit/libel-suit-rg.otf) format("truetype");
+  src: url(../ressources/font/libel_suit/libel-suit-rg.otf) format("truetype");
 }
 @font-face {
   font-family: "Overlock";
-  src: url(./ressources/font/Overlock/Overlock-Italic.ttf) format("truetype");
+  src: url(../ressources/font/Overlock/Overlock-Italic.ttf) format("truetype");
 }
 @font-face {
   font-family: "Marcellus";
-  src: url(./ressources/font/Marcellus/Marcellus-Regular.ttf) format("truetype");
+  src: url(../ressources/font/Marcellus/Marcellus-Regular.ttf) format("truetype");
 }
 
 a{
@@ -124,7 +124,7 @@ main{
 
 /* Precise CSS */
 #mainImage{
-  background-image: url(./ressources/installation1.jpg);
+  background-image: url(../ressources/installationBW.jpg);
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -167,7 +167,7 @@ main{
 #logo3S{
   margin-top: 10px;
   margin-bottom: 10px;
-  background-image: url(./ressources/logoH3S.png);
+  background-image: url(../ressources/logoH3S.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
