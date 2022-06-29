@@ -20,24 +20,40 @@
   <body class="bg-dark text-light">
     
     <!-- DEBUT DE LA MODALE -->
-    <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="modalContact" aria-hidden="true">
+    <div class="modal fade text-dark" id="modalContact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-    
-          <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <h5 class="modal-title mainFontFam" id="exampleModalLabel">Nous contacter</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-    
-          <!-- Modal body -->
-          <div class="modal-body">
-            Modal body..
+          <div class="modal-body secondaryFontFam">
+            <form id="modalForm">
+              <div class="mb-3">
+                <label for="InputEmail" class="form-label">Votre adresse mail</label>
+                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="email@example.com">
+                <div id="emailHelp" class="form-text thirdFontFam">Nous n'utiliserons pas votre e-mail à des fins malveillantes.</div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label for="inputFirstName" class="form-label">Votre prénom</label>
+                  <input type="text" class="form-control" id="inputFirstName" placeholder="John">
+                </div>
+                <div class="col-6">
+                  <label for="inputLastName" class="form-label">Votre nom</label>
+                  <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+                </div>
+
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="inputTextArea">Votre message</label>
+                <textarea type="text" class="form-control" id="inputTextArea" placeholder="Ecrivez-nous votre message ici"></textarea>
+              </div>
+            </form>
           </div>
-    
-          <!-- Modal footer -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-orange" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary mainFontFam" data-bs-dismiss="modal">Fermer</button>
+            <button class="btn btn-orange" type="submit">Envoyer le message</button>
           </div>
         </div>
       </div>
@@ -134,6 +150,7 @@
     <script src="./json/dataEvent.json"></script>
     <script src="./script/scriptEvent.js"></script>
     <script src="./script/socialMedia.js"></script>
+    <script src="./script/contact.js"></script>
   </body>
 
 </html>
