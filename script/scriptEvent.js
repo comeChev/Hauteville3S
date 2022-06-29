@@ -152,8 +152,6 @@ function addChevron(target, targetTitle){
 
 // chargement de la page
 populateData()
-// écouteur d'évenement pour l'ouverture de la modale
-buttonModal.addEventListener("click",showModal);
 // écouteur d'événement sur le clic de targetEventsPast
 targetEventsPast.addEventListener('click', ()=>{
   addChevron(eventTargetPast,targetEventsPast)

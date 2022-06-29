@@ -33,9 +33,6 @@ function underConstruction(){
 // ---------------------------------------------------------
 // LANCEMENT DES FONCTIONS
 // ---------------------------------------------------------
-
-
-//document.onreadystatechange = setTimeout(showModal,1000)
 showMap(lgMediaQuery);
 lgMediaQuery.addEventListener("change",showMap);
 
