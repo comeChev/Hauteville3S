@@ -98,13 +98,29 @@ main{
 .collapsed-event{
   display: none;
 }
-.chevron-down::before{
+.chevron-down::after{
   font-family: 'bootstrap-icons';
-  content : "\F282"
+  content : "\F282";
+  position: absolute;
+  right:30px;
 }
-.chevron-up::before{
+.chevron-up::after{
   font-family: 'bootstrap-icons';
-  content : "\F286"
+  content : "\F286";
+  position: absolute;
+  right:30px;
+}
+.clickable{
+  cursor: pointer;
+  background-color: rgba(165, 155, 143, 0.601);
+  border-radius: 10px;
+  margin:10px;
+  padding: 5px;
+  transition: all 0.3s ease-out;
+}
+.clickable:hover{
+  background-color: rgb(165, 155, 143);
+  font-size: ;
 }
 
 /* Precise CSS */

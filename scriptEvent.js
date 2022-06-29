@@ -8,6 +8,8 @@ let eventTargetNow = document.querySelector("#eventTargetNow")
 let eventTargetPast = document.querySelector("#eventTargetPast")
 let targetEventsPast = document.querySelector("#targetEventsPast")
 let targetEventsNow = document.querySelector("#targetEventsNow")
+let txtEventNow = document.querySelector('#txtEventNow')
+let txtEventPast = document.querySelector('#txtEventPast')
 let myDataEvent=[];
 let myDataEventNow=[];
 let myDataEventPast=[];
@@ -17,6 +19,19 @@ let dateNow= new Date()
 // DECLARATION DES FONCTIONS
 // ---------------------------------------------------------
 
+function populateTextEvent(array,element,txt){
+  element.innerText=""
+  console.log(array.length)
+  if(array.length>0 || array.length == null){
+    if(array.length == 1){
+      element.innerText = `1 événement ${txt}`
+    } else {
+      element.innerText = `${array.length} événements ${txt}`
+    }
+  } else{
+    element.innerText="Aucun événement"
+  }
+}
 function sortArrayDate (array){
   array.sort((a,b)=>{
     return new Date(a.dateEvent) - new Date(b.dateEvent)
@@ -112,7 +127,9 @@ async function populateData(){
   sortArrayDate(myDataEventNow);
   sortArrayDate(myDataEventPast)
   let loadingPage = await loadPage()
-  loadPage()
+  populateTextEvent(myDataEventNow,txtEventNow,"à venir")
+  populateTextEvent(myDataEventPast,txtEventPast, "passés")
+  
 }
 function addChevron(target, targetTitle){
   let titleTarget = targetTitle.children[0]
@@ -145,6 +162,10 @@ buttonModal.addEventListener("click",showModal);
 // écouteur d'événement sur le clic de targetEventsPast
 targetEventsPast.addEventListener('click', ()=>{
   addChevron(eventTargetPast,targetEventsPast)
+})
+// écouteur d'événement sur le clic de targetEventsNow
+targetEventsNow.addEventListener('click',()=>{
+  addChevron(eventTargetNow,targetEventsNow)
 })
 // écouteur d'événement sur changement de mediaQuery
 mdMediaQuery.addEventListener("change",()=>{
