@@ -37,15 +37,15 @@ function validateForm(array){
   if (!count==0){
     let message = modalForm.appendChild(messageDiv)
     message.innerText = `Votre message ne peut être validé. Merci de remplir toutes les cases.`
-    message.classList.add("row", "justify-content-center", "text-danger", "txtInfo")
+    message.classList.add("row", "justify-content-center","text-center", "text-danger", "txtInfo")
   } else{
     let messageDiv2 = document.createElement("div")
     let message = modalForm.appendChild(messageDiv)
     message.innerText = `Votre message a bien été envoyé. Nous vous répondrons sous peu.`
-    message.classList.add("row", "justify-content-center", "text-success","txtInfo")
+    message.classList.add("row", "justify-content-center","text-center", "text-success","txtInfo")
     let messageClose = modalForm.appendChild(messageDiv2)
     messageClose.innerText = `Cette fenêtre va ser fermer automatiquement.`
-    messageClose.classList.add("row", "justify-content-center", "text-success","txtInfo")
+    messageClose.classList.add("row", "justify-content-center","text-center", "text-success","txtInfo")
     timeOutForm(3000)
   }
 }

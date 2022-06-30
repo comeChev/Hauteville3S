@@ -56,15 +56,15 @@ function validateFormRegister(array){
   if (!count==0){
     let messageRegister = modalFormRegister.appendChild(messageDivRegister)
     messageRegister.innerText = `Votre inscription ne peut être validée. Merci de remplir toutes les cases.`
-    messageRegister.classList.add("row", "justify-content-center", "text-danger", "txtInfoRegister")
+    messageRegister.classList.add("row", "text-center","justify-content-center", "text-danger", "txtInfoRegister")
   } else{
     let messageDivRegister2 = document.createElement("div")
     let messageRegister = modalFormRegister.appendChild(messageDivRegister)
     messageRegister.innerText = `Votre inscription a bien été prise en compte. Nous vous répondrons sous peu.`
-    messageRegister.classList.add("row", "justify-content-center", "text-success","txtInfoRegister")
+    messageRegister.classList.add("row", "text-center","justify-content-center", "text-success","txtInfoRegister")
     let messageCloseRegister = modalFormRegister.appendChild(messageDivRegister2)
     messageCloseRegister.innerText = `Cette fenêtre va se fermer automatiquement.`
-    messageCloseRegister.classList.add("row", "justify-content-center", "text-success","txtInfoRegister")
+    messageCloseRegister.classList.add("row", "text-center","justify-content-center", "text-success","txtInfoRegister")
     timeOutFormRegister(3000)
   }
 }
