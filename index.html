@@ -31,29 +31,29 @@
               <form id="modalForm">
                 <div class="mb-3">
                   <label for="InputEmail" class="form-label">Votre adresse mail</label>
-                  <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="email@example.com">
+                  <input type="email" class="form-control contactForm" id="InputEmail" aria-describedby="emailHelp" placeholder="email@example.com">
                   <div id="emailHelp" class="form-text thirdFontFam">Nous n'utiliserons pas votre e-mail à des fins malveillantes.</div>
                 </div>
                 <div class="row mb-3">
                   <div class="col-6">
                     <label for="inputFirstName" class="form-label">Votre prénom</label>
-                    <input type="text" class="form-control" id="inputFirstName" placeholder="John">
+                    <input type="text" class="form-control contactForm" id="inputFirstName" placeholder="John">
                   </div>
                   <div class="col-6">
                     <label for="inputLastName" class="form-label">Votre nom</label>
-                    <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+                    <input type="text" class="form-control contactForm" id="inputLastName" placeholder="Doe">
                   </div>
   
                 </div>
                 <div class="mb-3">
                   <label class="form-label" for="inputTextArea">Votre message</label>
-                  <textarea type="text" class="form-control" id="inputTextArea" placeholder="Ecrivez-nous votre message ici"></textarea>
+                  <textarea type="text" class="form-control contactForm" id="inputTextArea" placeholder="Ecrivez-nous votre message ici"></textarea>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary mainFontFam" data-bs-dismiss="modal">Fermer</button>
-              <button class="btn btn-orange" type="submit">Envoyer le message</button>
+              <button class="btn btn-orange" id="btnContact" type="submit">Envoyer le message</button>
             </div>
           </div>
         </div>

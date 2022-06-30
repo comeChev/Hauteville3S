@@ -1,13 +1,9 @@
 // ---------------------------------------------------------
 // DECLARATION DES VARIABLES
 // ---------------------------------------------------------
-let myModalForm = new bootstrap.Modal(document.querySelector("#modalContact"), {});
-let form = document.querySelectorAll(".form-control")
-let mail = document.querySelector("#inputEmail");
-let firstName = document.querySelector("#inputFirstName")
-let lastName = document.querySelector("#inputLastName")
-let msg = document.querySelector("#inputTextArea")
-let submitButton = document.querySelector('button[type="submit"]')
+let myModalForm = new bootstrap.Modal(document.querySelector("#modalContact"));
+let form = document.querySelectorAll(".contactForm")
+let submitButton = document.querySelector('#submitButtonContact')
 let modalForm = document.querySelector("#modalForm")
 
 // ---------------------------------------------------------
@@ -17,6 +13,12 @@ function timeOutForm(time){
   setTimeout(()=>{
     myModalForm.hide()
   },time)
+}
+function showFormContact(){
+  myModalForm.show()
+}
+function closeFormContact(){
+  myModalForm.hide()
 }
 function validateForm(array){
   let count=0
@@ -45,7 +47,6 @@ function validateForm(array){
     messageClose.innerText = `Cette fenêtre va ser fermer automatiquement.`
     messageClose.classList.add("row", "justify-content-center", "text-success","txtInfo")
     timeOutForm(3000)
-    console.log(`finish`)
   }
 }
 

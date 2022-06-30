@@ -24,35 +24,36 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title mainFontFam">Nous contacter</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title mainFontFam" id="exampleModalLabel">Nous contacter</h5>
+            <button type="button" class="btn-close" onclick="closeFormContact()" aria-label="Close"></button>
           </div>
           <div class="modal-body secondaryFontFam">
             <form id="modalForm">
               <div class="mb-3">
                 <label for="InputEmail" class="form-label">Votre adresse mail</label>
-                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="email@example.com">
+                <input type="email" class="form-control contactForm" id="InputEmail" aria-describedby="emailHelp" placeholder="email@example.com">
                 <div id="emailHelp" class="form-text thirdFontFam">Nous n'utiliserons pas votre e-mail à des fins malveillantes.</div>
               </div>
               <div class="row mb-3">
                 <div class="col-6">
                   <label for="inputFirstName" class="form-label">Votre prénom</label>
-                  <input type="text" class="form-control" id="inputFirstName" placeholder="John">
+                  <input type="text" class="form-control contactForm" id="inputFirstName" placeholder="John">
                 </div>
                 <div class="col-6">
                   <label for="inputLastName" class="form-label">Votre nom</label>
-                  <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+                  <input type="text" class="form-control contactForm" id="inputLastName" placeholder="Doe">
                 </div>
+
               </div>
               <div class="mb-3">
                 <label class="form-label" for="inputTextArea">Votre message</label>
-                <textarea type="text" class="form-control" id="inputTextArea" placeholder="Ecrivez-nous votre message ici"></textarea>
+                <textarea type="text" class="form-control contactForm" id="inputTextArea" placeholder="Ecrivez-nous votre message ici"></textarea>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary mainFontFam" data-bs-dismiss="modal">Fermer</button>
-            <button class="btn btn-orange" type="submit">Envoyer le message</button>
+            <button type="button" class="btn btn-secondary mainFontFam" onclick="closeFormContact()">Fermer</button>
+            <button class="btn btn-orange" id="submitButtonContact" onclick="validateForm()">Envoyer le message</button>
           </div>
         </div>
       </div>
@@ -65,10 +66,10 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title mainFontFam">S'inscrire</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close" onclick="closeFormRegister()" aria-label="Close"></button>
             </div>
             <div class="modal-body secondaryFontFam">
-              <form id="modalForm">
+              <form id="modalFormRegister">
                 <div class="mb-3">
                   <label for="inputEvent" class="form-label">Evénement</label>
                   <input type="text" class="form-control" id="inputEvent" aria-describedby="eventHelp">
@@ -81,7 +82,7 @@
                   </div>
                   <div class="col-6">
                     <label for="nbPeopleSelect" class="form-label">Nombre de personnes</label>
-                    <select id="nbPeopleSelect" class="form-select">
+                    <select id="nbPeopleSelect" class="form-select register-form">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -93,27 +94,27 @@
                 <div class="row mb-3">
                   <div class="col-6">
                     <label for="inputFirstName" class="form-label">Votre prénom</label>
-                    <input type="text" class="form-control" id="inputFirstName" placeholder="John">
+                    <input type="text" class="form-control register-form" id="inputFirstName" placeholder="John">
                   </div>
                   <div class="col-6">
                     <label for="inputLastName" class="form-label">Votre nom</label>
-                    <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+                    <input type="text" class="form-control register-form" id="inputLastName" placeholder="Doe">
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="InputMail" class="form-label">Votre adresse mail</label>
-                  <input type="mail" class="form-control" id="InputMail" aria-describedby="mailHelp" placeholder="mail@example.com">
+                  <input type="mail" class="form-control register-form" id="InputMail" aria-describedby="mailHelp" placeholder="mail@example.com">
                   <div id="mailHelp" class="form-text thirdFontFam">Votre mail ne sera utilisé que pour valider votre inscription</div>
                 </div>
                 <div class="mb-3">
                   <label class="form-label" for="inputTextArea">Votre message</label>
-                  <textarea type="text" class="form-control" id="inputTextArea" placeholder="Ecrivez-nous votre message ici"></textarea>
+                  <textarea type="text" class="form-control register-form" id="inputTextArea" placeholder="Ecrivez-nous votre message ici"></textarea>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary mainFontFam" data-bs-dismiss="modal">Fermer</button>
-              <button class="btn btn-orange" type="submit">Envoyer le message</button>
+              <button type="button" class="btn btn-secondary mainFontFam" onclick="closeFormRegister()">Fermer</button>
+              <button class="btn btn-orange" id='btnRegister' type="submit">S'inscrire</button>
             </div>
           </div>
         </div>
@@ -144,7 +145,7 @@
             </ul>
             <ul class="navbar-nav ms-md-auto">
               <li class="nav-item">
-                <a class="btn btn-orange" id="btnContact" data-bs-target="#modalContact" data-bs-toggle="modal">Nous contacter</a>
+                <a class="btn btn-orange" id="btnContact" onclick="showFormContact()">Nous contacter</a>
               </li>
             </ul>
           </div>
@@ -211,6 +212,7 @@
     <script src="./script/scriptEvent.js"></script>
     <script src="./script/socialMedia.js"></script>
     <script src="./script/contact.js"></script>
+    <script src="./script/register-modal.js"></script>
   </body>
 
 </html>

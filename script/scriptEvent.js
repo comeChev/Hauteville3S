@@ -2,10 +2,6 @@
 // DECLARATION DES VARIABLES
 // ---------------------------------------------------------
 let buttonModal = document.querySelector("#btnContact")
-let modalRegister = new bootstrap.Modal(document.querySelector('#modalRegister'))
-let btnRegister = document.querySelector('#btnRegister')
-let inputEvent = document.getElementById('inputEvent')
-let inputDate = document.querySelector('#inputDate')
 let mdMediaQuery = window.matchMedia("(min-width: 768px)")
 let eventTargetNow = document.querySelector("#eventTargetNow")
 let eventTargetPast = document.querySelector("#eventTargetPast")
@@ -22,21 +18,6 @@ let dateNow= new Date()
 // DECLARATION DES FONCTIONS
 // ---------------------------------------------------------
 
-function showModalRegister(event){
-  modalRegister.show()
-  let divRegister = event.target.parentElement
-  let eventValue = divRegister.children[0].innerText
-  console.log(eventValue)
-  console.log(inputEvent)
-  let dateEventValue = formatDateShort(new Date(divRegister.children[1].innerText))
-  console.log(dateEventValue)
-  inputEvent.value = eventValue
-  inputEvent.setAttribute('disabled','')
-  inputDate.setAttribute('value',`${dateEventValue}`)
-  inputDate.setAttribute('disabled','')
-  console.log(inputDate)
-
-}
 function populateTextEvent(array,element,txt){
   element.innerText=""
   if(array.length>0 || array.length == null){
@@ -53,10 +34,6 @@ function formatDateLong(date){
   let event = new Date(date);
   let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   return event.toLocaleDateString(undefined, options);
-}
-function formatDateShort(date){
-  let event = new Date(date);
-  return `${event.toLocaleDateString(undefined, {year:'numeric'})}-${event.toLocaleDateString(undefined, {month:'2-digit'})}-${event.toLocaleDateString(undefined, {day:'numeric'})}`
 }
 function sortArrayDate (array){
   array.sort((a,b)=>{
