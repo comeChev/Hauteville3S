@@ -19,8 +19,8 @@
 
   <body class="bg-dark text-light">
     
-    <!-- DEBUT DE LA MODALE -->
-    <div class="modal fade text-dark" id="modalContact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- DEBUT DE LA MODALE CONTACT -->
+    <div class="modal fade text-dark" id="modalContact" tabindex="-1" aria-labelledby="modalContact" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -56,6 +56,67 @@
           </div>
         </div>
       </div>
+    </div>
+    <!-- FIN DE LA MODALE -->
+
+    <!-- DEBUT DE LA MODALE INSCRIPTION -->
+    <div class="modal fade text-dark" id="modalRegister" tabindex="-1" aria-labelledby="modalRegister" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title mainFontFam">S'inscrire</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body secondaryFontFam">
+              <form id="modalForm">
+                <div class="mb-3">
+                  <label for="inputEvent" class="form-label">Evénement</label>
+                  <input type="text" class="form-control" id="inputEvent" aria-describedby="eventHelp">
+                  <div id="eventHelp" class="form-text thirdFontFam">Inscription selon places disponibles.</div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="inputDate" class="form-label">Date de l'événement</label>
+                    <input type="date" class="form-control" id="inputDate">
+                  </div>
+                  <div class="col-6">
+                    <label for="nbPeopleSelect" class="form-label">Nombre de personnes</label>
+                    <select id="nbPeopleSelect" class="form-select">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="inputFirstName" class="form-label">Votre prénom</label>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="John">
+                  </div>
+                  <div class="col-6">
+                    <label for="inputLastName" class="form-label">Votre nom</label>
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="InputMail" class="form-label">Votre adresse mail</label>
+                  <input type="mail" class="form-control" id="InputMail" aria-describedby="mailHelp" placeholder="mail@example.com">
+                  <div id="mailHelp" class="form-text thirdFontFam">Votre mail ne sera utilisé que pour valider votre inscription</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="inputTextArea">Votre message</label>
+                  <textarea type="text" class="form-control" id="inputTextArea" placeholder="Ecrivez-nous votre message ici"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary mainFontFam" data-bs-dismiss="modal">Fermer</button>
+              <button class="btn btn-orange" type="submit">Envoyer le message</button>
+            </div>
+          </div>
+        </div>
     </div>
     <!-- FIN DE LA MODALE -->
 

@@ -2,6 +2,10 @@
 // DECLARATION DES VARIABLES
 // ---------------------------------------------------------
 let buttonModal = document.querySelector("#btnContact")
+let modalRegister = new bootstrap.Modal(document.querySelector('#modalRegister'))
+let btnRegister = document.querySelector('#btnRegister')
+let inputEvent = document.getElementById('inputEvent')
+let inputDate = document.querySelector('#inputDate')
 let mdMediaQuery = window.matchMedia("(min-width: 768px)")
 let eventTargetNow = document.querySelector("#eventTargetNow")
 let eventTargetPast = document.querySelector("#eventTargetPast")
@@ -18,6 +22,21 @@ let dateNow= new Date()
 // DECLARATION DES FONCTIONS
 // ---------------------------------------------------------
 
+function showModalRegister(event){
+  modalRegister.show()
+  let divRegister = event.target.parentElement
+  let eventValue = divRegister.children[0].innerText
+  console.log(eventValue)
+  console.log(inputEvent)
+  let dateEventValue = formatDateShort(new Date(divRegister.children[1].innerText))
+  console.log(dateEventValue)
+  inputEvent.value = eventValue
+  inputEvent.setAttribute('disabled','')
+  inputDate.setAttribute('value',`${dateEventValue}`)
+  inputDate.setAttribute('disabled','')
+  console.log(inputDate)
+
+}
 function populateTextEvent(array,element,txt){
   element.innerText=""
   if(array.length>0 || array.length == null){
@@ -30,6 +49,15 @@ function populateTextEvent(array,element,txt){
     element.innerText="Aucun événement"
   }
 }
+function formatDateLong(date){
+  let event = new Date(date);
+  let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  return event.toLocaleDateString(undefined, options);
+}
+function formatDateShort(date){
+  let event = new Date(date);
+  return `${event.toLocaleDateString(undefined, {year:'numeric'})}-${event.toLocaleDateString(undefined, {month:'2-digit'})}-${event.toLocaleDateString(undefined, {day:'numeric'})}`
+}
 function sortArrayDate (array){
   array.sort((a,b)=>{
     return new Date(a.dateEvent) - new Date(b.dateEvent)
@@ -41,25 +69,24 @@ function underConstruction(){
 function populateMobile(){
   eventTargetNow.innerHTML = ""
   myDataEventNow.forEach(event => {
-    let dateEvent = new Date(event.dateEvent)
+    let dateEvent = formatDateLong(new Date(event.dateEvent))
     eventTargetNow.innerHTML += `<div class="card shadow-card col-12 mb-4">
     <div class=" card-body ps-2 pe-2 col-12 bg-white text-dark rounded">
-    <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
-      <h6 class="card-subtitle secondaryFontFam">${dateEvent}</h6>
+      <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
+      <h6 class="card-subtitle pt-2 pb-2 secondaryFontFam">${dateEvent}</h6>
       <p class="card-text thirdFontFam">${event.descEvent}</p>
-      <button class="btn btn-orange float-end mainFontFam">S'incrire</button>
-      </div>
-      </div>`
+      <button class="btn btn-orange btn-bot mainFontFam" onclick="showModalRegister(event)">S'incrire</button>
+    </div>
+    </div>`
     });
     eventTargetPast.innerHTML=""
     myDataEventPast.forEach(event => {
-      let dateEvent = new Date(event.dateEvent)
+      let dateEvent = formatDateLong(new Date(event.dateEvent))
       eventTargetPast.innerHTML += `<div class="card shadow-card col-12 mb-4">
       <div class=" card-body ps-2 pe-2 col-12 bg-white text-dark rounded">
       <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
-      <h6 class="card-subtitle secondaryFontFam">${dateEvent}</h6>
+      <h6 class="card-subtitle pt-2 pb-2 secondaryFontFam">${dateEvent}</h6>
       <p class="card-text thirdFontFam">${event.descEvent}</p>
-      <button class="btn btn-orange float-end mainFontFam">S'incrire</button>
       </div>
       </div>`
     });
@@ -68,30 +95,29 @@ function populateMobile(){
 function populate(){
   eventTargetNow.innerHTML = ""
   myDataEventNow.forEach(event => {
-    let dateEvent = new Date(event.dateEvent)
+    let dateEvent = formatDateLong(new Date(event.dateEvent))
     eventTargetNow.innerHTML += `<div class="col-md-4 col-lg-3 pb-2 pt-2">
     <div class="card animateCard text-dark bg-light card-size">
     <img class="card-img-top" src= ${event.imgEvent}>
     <div class="card-body position-relative">
     <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
-    <h6 class="card-subtitle secondaryFontFam">${dateEvent}</h6>
+    <h6 class="card-subtitle pt-2 pb-2 secondaryFontFam">${dateEvent}</h6>
     <p class="card-text thirdFontFam pb-4">${event.descEvent}</p>
-    <button class="btn btn-orange btn-bot mainFontFam">S'incrire</button>
+    <button class="btn btn-orange btn-bot mainFontFam" onclick="showModalRegister(event)">S'incrire</button>
     </div>
     </div>
     </div>`
   })
   eventTargetPast.innerHTML = ""
   myDataEventPast.forEach(event => {
-    let dateEvent = new Date(event.dateEvent)
+    let dateEvent = formatDateLong(new Date(event.dateEvent))
     eventTargetPast.innerHTML += `<div class="col-md-4 col-lg-3 pb-2 pt-2">
     <div class="card animateCard text-dark bg-light card-size">
     <img class="card-img-top" src= ${event.imgEvent}>
     <div class="card-body position-relative">
     <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
-    <h6 class="card-subtitle secondaryFontFam">${dateEvent}</h6>
+    <h6 class="card-subtitle pt-2 pb-2 secondaryFontFam">${dateEvent}</h6>
     <p class="card-text thirdFontFam pb-4">${event.descEvent}</p>
-    <button class="btn btn-orange btn-bot mainFontFam">S'incrire</button>
     </div>
     </div>
     </div>`
@@ -168,5 +194,6 @@ mdMediaQuery.addEventListener("change",()=>{
     populateMobile()
   }
 });
+
 
 
