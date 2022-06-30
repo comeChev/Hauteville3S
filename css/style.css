@@ -103,13 +103,13 @@ main{
   font-family: 'bootstrap-icons';
   content : "\F282";
   position: absolute;
-  right:30px;
+  right:40px;
 }
 .chevron-up::after{
   font-family: 'bootstrap-icons';
   content : "\F286";
   position: absolute;
-  right:30px;
+  right:40px;
 }
 .clickable{
   cursor: pointer;
