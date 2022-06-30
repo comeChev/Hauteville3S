@@ -51,6 +51,7 @@ function populateMobile(){
     <div class=" card-body ps-2 pe-2 col-12 bg-white text-dark rounded">
       <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
       <h6 class="card-subtitle pt-2 pb-2 secondaryFontFam">${dateEvent}</h6>
+      <span style="display:none">${event.dateEvent}</span>
       <p class="card-text thirdFontFam">${event.descEvent}</p>
       <button class="btn btn-orange btn-bot mainFontFam" onclick="showModalRegister(event)">S'incrire</button>
     </div>
@@ -63,6 +64,7 @@ function populateMobile(){
       <div class=" card-body ps-2 pe-2 col-12 bg-white text-dark rounded">
       <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
       <h6 class="card-subtitle pt-2 pb-2 secondaryFontFam">${dateEvent}</h6>
+      <span style="display:none">${event.dateEvent}</span>
       <p class="card-text thirdFontFam">${event.descEvent}</p>
       </div>
       </div>`
@@ -79,6 +81,7 @@ function populate(){
     <div class="card-body position-relative">
     <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
     <h6 class="card-subtitle pt-2 pb-2 secondaryFontFam">${dateEvent}</h6>
+    <span style="display:none">${event.dateEvent}</span>
     <p class="card-text thirdFontFam pb-4">${event.descEvent}</p>
     <button class="btn btn-orange btn-bot mainFontFam" onclick="showModalRegister(event)">S'incrire</button>
     </div>
@@ -94,6 +97,7 @@ function populate(){
     <div class="card-body position-relative">
     <h3 class="card-title mainFontFam">${event.nameEvent}</h3>
     <h6 class="card-subtitle pt-2 pb-2 secondaryFontFam">${dateEvent}</h6>
+    <span style="display:none">${event.dateEvent}</span>
     <p class="card-text thirdFontFam pb-4">${event.descEvent}</p>
     </div>
     </div>

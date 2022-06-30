@@ -28,16 +28,11 @@ function showModalRegister(event){
   modalRegister.show()
   let divRegister = event.target.parentElement
   let eventValue = divRegister.children[0].innerText
-  console.log(eventValue)
-  console.log(inputEvent)
-  let dateEventValue = formatDateShort(new Date(divRegister.children[1].innerText))
-  console.log(dateEventValue)
+  let dateEventValue = formatDateShort(new Date(divRegister.children[2].innerText))
   inputEvent.value = eventValue
   inputEvent.setAttribute('disabled','')
   inputDate.setAttribute('value',`${dateEventValue}`)
   inputDate.setAttribute('disabled','')
-  console.log(inputDate)
-
 }
 function validateFormRegister(array){
   let count=0
